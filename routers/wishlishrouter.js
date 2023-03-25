@@ -1,7 +1,7 @@
 const express= require('express');
 const protect = require('../middelware/wishlishmiddelware')
 
-const { getwishlish, postwishlish, deletewishlish } = require("../Controllers/wishlishcontrollers");
+const { getwishlish, postwishlish, deletewishlish } = require("../controllers/wishlishcontrollers");
 const router = express.Router();
 router.use(express.json())
 
