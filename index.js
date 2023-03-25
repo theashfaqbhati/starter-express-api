@@ -22,12 +22,12 @@ const app = express();
 const { route } = require('./routers/wishlishrouter');
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000;
-
+const cors = require("cors")
 const ConnectDB = require('./config/db');
 ConnectDB()
 
 app.use(express.urlencoded({ extended: false }));
-
+app.use(cors())
  const errorHandler = require('./middelware/errormiddelware')
 
 app.get("/",(req,res)=>{
